@@ -1,6 +1,6 @@
-# gem install ruby-trello
+# https://github.com/smj10j/git-notified-on-trello
 
-# Got consumer key by calling
+# Get consumer key by calling
 # https://trello.com/1/authorize?key=YOUR_API_KEY&name=YOUR_APP_NAME&response_type=token&scope=read,write,account&expiration=never
 
 ## SET THESE ENVIRONMENT VARIABLES
@@ -36,7 +36,6 @@ if ( matches && matches.size > 0 )
     comment+= "#{AUTHOR} just committed a change to *#{BRANCH}* and tagged this card with the following message:\n"
     comment+= "     \n"
     comment+= "     \"#{COMMIT_MSG}\""
-    
     
     card.add_comment(comment)
 

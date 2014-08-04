@@ -1,0 +1,14 @@
+test-credentials
+*.rbc
+.rbx
+.rvmrc
+*.gem
+coverage
+.*.sw?
+test*.rb
+bin
+.bundle
+vendor/bundle
+Gemfile.lock
+.project
+.DS_Store

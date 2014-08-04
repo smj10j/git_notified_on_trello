@@ -1,0 +1,1433 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+<title>Helpers.html - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body class="file">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../CONTRIBUTING_md.html">CONTRIBUTING</a>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../LICENSE.html">LICENSE</a>
+  
+    <li class="file"><a href="../README_md.html">README</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../doc/Gemfile_html.html">Gemfile.html</a>
+  
+    <li class="file"><a href="../doc/Helpers_html.html">Helpers.html</a>
+  
+    <li class="file"><a href="../doc/IntegrationTest_html.html">IntegrationTest.html</a>
+  
+    <li class="file"><a href="../doc/IntegrationTest/Container_html.html">Container.html</a>
+  
+    <li class="file"><a href="../doc/LICENSE_html.html">LICENSE.html</a>
+  
+    <li class="file"><a href="../doc/Object_html.html">Object.html</a>
+  
+    <li class="file"><a href="../doc/Rakefile_html.html">Rakefile.html</a>
+  
+    <li class="file"><a href="../doc/String_html.html">String.html</a>
+  
+    <li class="file"><a href="../doc/Trello_html.html">Trello.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Action_html.html">Action.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Association_html.html">Association.html</a>
+  
+    <li class="file"><a href="../doc/Trello/AssociationProxy_html.html">AssociationProxy.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Attachment_html.html">Attachment.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Authorization_html.html">Authorization.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Authorization/BasicAuthPolicy_html.html">BasicAuthPolicy.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Authorization/Clock_html.html">Clock.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Authorization/Nonce_html.html">Nonce.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Authorization/OAuthPolicy_html.html">OAuthPolicy.html</a>
+  
+    <li class="file"><a href="../doc/Trello/BasicData_html.html">BasicData.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Board_html.html">Board.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Card_html.html">Card.html</a>
+  
+    <li class="file"><a href="../doc/Trello/CheckItemState_html.html">CheckItemState.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Checklist_html.html">Checklist.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Client_html.html">Client.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Client/EnterYourPublicKey_html.html">EnterYourPublicKey.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Client/EnterYourSecret_html.html">EnterYourSecret.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Configuration_html.html">Configuration.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Error_html.html">Error.html</a>
+  
+    <li class="file"><a href="../doc/Trello/HasActions_html.html">HasActions.html</a>
+  
+    <li class="file"><a href="../doc/Trello/InvalidAccessToken_html.html">InvalidAccessToken.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Item_html.html">Item.html</a>
+  
+    <li class="file"><a href="../doc/Trello/ItemState_html.html">ItemState.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Label_html.html">Label.html</a>
+  
+    <li class="file"><a href="../doc/Trello/LabelName_html.html">LabelName.html</a>
+  
+    <li class="file"><a href="../doc/Trello/List_html.html">List.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Member_html.html">Member.html</a>
+  
+    <li class="file"><a href="../doc/Trello/MultiAssociation_html.html">MultiAssociation.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Notification_html.html">Notification.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Organization_html.html">Organization.html</a>
+  
+    <li class="file"><a href="../doc/Trello/RecordNotFound_html.html">RecordNotFound.html</a>
+  
+    <li class="file"><a href="../doc/Trello/TInternet_html.html">TInternet.html</a>
+  
+    <li class="file"><a href="../doc/Trello/Token_html.html">Token.html</a>
+  
+    <li class="file"><a href="../doc/created_rid.html">created.rid</a>
+  
+    <li class="file"><a href="../doc/index_html.html">index.html</a>
+  
+    <li class="file"><a href="../doc/js/darkfish_js.html">darkfish.js</a>
+  
+    <li class="file"><a href="../doc/js/jquery_js.html">jquery.js</a>
+  
+    <li class="file"><a href="../doc/js/navigation_js.html">navigation.js</a>
+  
+    <li class="file"><a href="../doc/js/search_js.html">search.js</a>
+  
+    <li class="file"><a href="../doc/js/search_index_js.html">search_index.js</a>
+  
+    <li class="file"><a href="../doc/js/searcher_js.html">searcher.js</a>
+  
+    <li class="file"><a href="../doc/lib/trello/action_rb_html.html">action_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/association_proxy_rb_html.html">association_proxy_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/association_rb_html.html">association_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/authorization_rb_html.html">authorization_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/basic_data_rb_html.html">basic_data_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/board_rb_html.html">board_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/card_rb_html.html">card_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/checklist_rb_html.html">checklist_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/client_rb_html.html">client_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/has_actions_rb_html.html">has_actions_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/item_rb_html.html">item_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/item_state_rb_html.html">item_state_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/list_rb_html.html">list_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/member_rb_html.html">member_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/multi_association_rb_html.html">multi_association_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/net_rb_html.html">net_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/notification_rb_html.html">notification_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/organization_rb_html.html">organization_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/string_rb_html.html">string_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello/token_rb_html.html">token_rb.html</a>
+  
+    <li class="file"><a href="../doc/lib/trello_rb_html.html">trello_rb.html</a>
+  
+    <li class="file"><a href="../doc/rdoc_css.html">rdoc.css</a>
+  
+    <li class="file"><a href="../doc/table_of_contents_html.html">table_of_contents.html</a>
+  
+    <li class="file"><a href="../doc/test-credentials_html.html">test-credentials.html</a>
+  
+    <li class="file"><a href="../ruby-trello_gemspec.html">ruby-trello.gemspec</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../Addressable.html">Addressable</a>
+  
+    <li><a href="../Array.html">Array</a>
+  
+    <li><a href="../Authorization.html">Authorization</a>
+  
+    <li><a href="../Hash.html">Hash</a>
+  
+    <li><a href="../Helpers.html">Helpers</a>
+  
+    <li><a href="../IntegrationTest.html">IntegrationTest</a>
+  
+    <li><a href="../IntegrationTest/Container.html">IntegrationTest::Container</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../String.html">String</a>
+  
+    <li><a href="../Trello.html">Trello</a>
+  
+    <li><a href="../Trello/Action.html">Trello::Action</a>
+  
+    <li><a href="../Trello/Association.html">Trello::Association</a>
+  
+    <li><a href="../Trello/AssociationProxy.html">Trello::AssociationProxy</a>
+  
+    <li><a href="../Trello/Attachment.html">Trello::Attachment</a>
+  
+    <li><a href="../Trello/Authorization.html">Trello::Authorization</a>
+  
+    <li><a href="../Trello/Authorization/BasicAuthPolicy.html">Trello::Authorization::BasicAuthPolicy</a>
+  
+    <li><a href="../Trello/Authorization/Clock.html">Trello::Authorization::Clock</a>
+  
+    <li><a href="../Trello/Authorization/Nonce.html">Trello::Authorization::Nonce</a>
+  
+    <li><a href="../Trello/Authorization/OAuthPolicy.html">Trello::Authorization::OAuthPolicy</a>
+  
+    <li><a href="../Trello/BasicData.html">Trello::BasicData</a>
+  
+    <li><a href="../Trello/Board.html">Trello::Board</a>
+  
+    <li><a href="../Trello/Card.html">Trello::Card</a>
+  
+    <li><a href="../Trello/CheckItemState.html">Trello::CheckItemState</a>
+  
+    <li><a href="../Trello/Checklist.html">Trello::Checklist</a>
+  
+    <li><a href="../Trello/Client.html">Trello::Client</a>
+  
+    <li><a href="../Trello/Configuration.html">Trello::Configuration</a>
+  
+    <li><a href="../Trello/CoverImage.html">Trello::CoverImage</a>
+  
+    <li><a href="../Trello/HasActions.html">Trello::HasActions</a>
+  
+    <li><a href="../Trello/Item.html">Trello::Item</a>
+  
+    <li><a href="../Trello/Label.html">Trello::Label</a>
+  
+    <li><a href="../Trello/LabelName.html">Trello::LabelName</a>
+  
+    <li><a href="../Trello/List.html">Trello::List</a>
+  
+    <li><a href="../Trello/Member.html">Trello::Member</a>
+  
+    <li><a href="../Trello/MultiAssociation.html">Trello::MultiAssociation</a>
+  
+    <li><a href="../Trello/Notification.html">Trello::Notification</a>
+  
+    <li><a href="../Trello/Organization.html">Trello::Organization</a>
+  
+    <li><a href="../Trello/TInternet.html">Trello::TInternet</a>
+  
+    <li><a href="../Trello/Token.html">Trello::Token</a>
+  
+    <li><a href="../Trello/Webhook.html">Trello::Webhook</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation" class="description">
+  
+<p>&lt;!DOCTYPE html&gt;</p>
+
+<p>&lt;html&gt; &lt;head&gt; &lt;meta content=“text/html; charset=UTF-8”
+http-equiv=“Content-Type”&gt;</p>
+
+<p>&lt;title&gt;module <a href="../Helpers.html">Helpers</a> - RDoc
+Documentation&lt;/title&gt;</p>
+
+<p>&lt;link type=“text/css” media=“screen” href=“./rdoc.css”
+rel=“stylesheet”&gt;</p>
+
+<p>&lt;script type=“text/javascript”&gt;</p>
+
+<pre>var rdoc_rel_prefix = &quot;./&quot;;</pre>
+
+<p>&lt;/script&gt;</p>
+
+<p>&lt;script type=“text/javascript” charset=“utf-8”
+src=“./js/jquery.js”&gt;&lt;/script&gt; &lt;script type=“text/javascript”
+charset=“utf-8” src=“./js/navigation.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/search_index.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/search.js”&gt;&lt;/script&gt; &lt;script type=“text/javascript”
+charset=“utf-8” src=“./js/searcher.js”&gt;&lt;/script&gt; &lt;script
+type=“text/javascript” charset=“utf-8”
+src=“./js/darkfish.js”&gt;&lt;/script&gt;</p>
+
+<p>&lt;body id=“top” class=“module”&gt; &lt;nav id=“metadata”&gt;</p>
+
+<pre>&lt;nav id=&quot;home-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;
+  &lt;a href=&quot;./index.html&quot;&gt;Home&lt;/a&gt;
+  &lt;a href=&quot;./table_of_contents.html#classes&quot;&gt;Classes&lt;/a&gt;
+  &lt;a href=&quot;./table_of_contents.html#methods&quot;&gt;Methods&lt;/a&gt;
+&lt;/h3&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;nav id=&quot;search-section&quot; class=&quot;section project-section&quot; class=&quot;initially-hidden&quot;&gt;
+&lt;form action=&quot;#&quot; method=&quot;get&quot; accept-charset=&quot;utf-8&quot;&gt;
+  &lt;h3 class=&quot;section-header&quot;&gt;
+    &lt;input type=&quot;text&quot; name=&quot;search&quot; placeholder=&quot;Search&quot; id=&quot;search-field&quot;
+           title=&quot;Type to search, Up and Down to navigate, Enter to load&quot;&gt;
+  &lt;/h3&gt;
+&lt;/form&gt;
+
+&lt;ul id=&quot;search-results&quot; class=&quot;initially-hidden&quot;&gt;&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;div id=&quot;file-metadata&quot;&gt;
+  &lt;nav id=&quot;file-list-section&quot; class=&quot;section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Defined In&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;spec/spec_helper.rb
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;class-metadata&quot;&gt;
+
+  &lt;!-- Method Quickref --&gt;</pre>
+
+<p>&lt;nav id=“method-list-section” class=“section”&gt;</p>
+
+<pre>&lt;h3 class=&quot;section-header&quot;&gt;Methods&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-actions_details&quot;&gt;#actions_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-actions_payload&quot;&gt;#actions_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-attachments_details&quot;&gt;#attachments_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-attachments_payload&quot;&gt;#attachments_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-boards_details&quot;&gt;#boards_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-boards_payload&quot;&gt;#boards_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-card_payload&quot;&gt;#card_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-cards_details&quot;&gt;#cards_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-cards_payload&quot;&gt;#cards_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-checklists_details&quot;&gt;#checklists_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-checklists_payload&quot;&gt;#checklists_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-label_details&quot;&gt;#label_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-label_name_details&quot;&gt;#label_name_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-label_name_payload&quot;&gt;#label_name_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-label_payload&quot;&gt;#label_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-lists_details&quot;&gt;#lists_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-lists_payload&quot;&gt;#lists_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-notification_details&quot;&gt;#notification_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-notification_payload&quot;&gt;#notification_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-organization_details&quot;&gt;#organization_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-organization_payload&quot;&gt;#organization_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-orgs_details&quot;&gt;#orgs_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-orgs_payload&quot;&gt;#orgs_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-token_details&quot;&gt;#token_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-token_payload&quot;&gt;#token_payload&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-user_details&quot;&gt;#user_details&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;#method-i-user_payload&quot;&gt;#user_payload&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;
+
+&lt;div id=&quot;project-metadata&quot;&gt;
+  &lt;nav id=&quot;fileindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Pages&lt;/h3&gt;
+
+&lt;ul&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./Gemfile.html&quot;&gt;Gemfile&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./LICENSE.html&quot;&gt;LICENSE&lt;/a&gt;
+
+  &lt;li class=&quot;file&quot;&gt;&lt;a href=&quot;./Rakefile.html&quot;&gt;Rakefile&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>  &lt;nav id=&quot;classindex-section&quot; class=&quot;section project-section&quot;&gt;
+&lt;h3 class=&quot;section-header&quot;&gt;Class and Module Index&lt;/h3&gt;
+
+&lt;ul class=&quot;link-list&quot;&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello.html&quot;&gt;Trello&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Action.html&quot;&gt;Trello::Action&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Association.html&quot;&gt;Trello::Association&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/AssociationProxy.html&quot;&gt;Trello::AssociationProxy&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Attachment.html&quot;&gt;Trello::Attachment&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Authorization.html&quot;&gt;Trello::Authorization&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Authorization/BasicAuthPolicy.html&quot;&gt;Trello::Authorization::BasicAuthPolicy&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Authorization/Clock.html&quot;&gt;Trello::Authorization::Clock&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Authorization/Nonce.html&quot;&gt;Trello::Authorization::Nonce&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Authorization/OAuthPolicy.html&quot;&gt;Trello::Authorization::OAuthPolicy&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/BasicData.html&quot;&gt;Trello::BasicData&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Board.html&quot;&gt;Trello::Board&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Card.html&quot;&gt;Trello::Card&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/CheckItemState.html&quot;&gt;Trello::CheckItemState&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Checklist.html&quot;&gt;Trello::Checklist&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Client.html&quot;&gt;Trello::Client&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Configuration.html&quot;&gt;Trello::Configuration&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Error.html&quot;&gt;Trello::Error&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/HasActions.html&quot;&gt;Trello::HasActions&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/InvalidAccessToken.html&quot;&gt;Trello::InvalidAccessToken&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Item.html&quot;&gt;Trello::Item&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Label.html&quot;&gt;Trello::Label&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/LabelName.html&quot;&gt;Trello::LabelName&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/List.html&quot;&gt;Trello::List&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Member.html&quot;&gt;Trello::Member&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/MultiAssociation.html&quot;&gt;Trello::MultiAssociation&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Notification.html&quot;&gt;Trello::Notification&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Organization.html&quot;&gt;Trello::Organization&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/TInternet.html&quot;&gt;Trello::TInternet&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Trello/Token.html&quot;&gt;Trello::Token&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./IntegrationTest.html&quot;&gt;IntegrationTest&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./IntegrationTest/Container.html&quot;&gt;IntegrationTest::Container&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Helpers.html&quot;&gt;Helpers&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./Object.html&quot;&gt;Object&lt;/a&gt;
+
+  &lt;li&gt;&lt;a href=&quot;./String.html&quot;&gt;String&lt;/a&gt;
+
+&lt;/ul&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<pre>&lt;/div&gt;</pre>
+
+<p>&lt;/nav&gt;</p>
+
+<p>&lt;div id=“documentation”&gt;</p>
+
+<pre class="ruby"><span class="ruby-operator">&lt;</span><span class="ruby-identifier">h1</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;module&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-keyword">module</span> <span class="ruby-constant">Helpers</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/h1&gt;
+
+&lt;div id=&quot;description&quot; class=&quot;description&quot;&gt;
+
+&lt;/</span><span class="ruby-identifier">div</span><span class="ruby-operator">&gt;</span><span class="ruby-operator">&lt;</span><span class="ruby-operator">!</span><span class="ruby-operator">-</span><span class="ruby-operator">-</span> <span class="ruby-identifier">description</span> <span class="ruby-operator">-</span><span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span>
+
+<span class="ruby-operator">&lt;</span><span class="ruby-identifier">section</span> <span class="ruby-identifier">id</span>=<span class="ruby-string">&quot;5Buntitled-5D&quot;</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;documentation-section&quot;</span><span class="ruby-operator">&gt;</span>
+
+  <span class="ruby-operator">&lt;</span><span class="ruby-operator">!</span><span class="ruby-operator">-</span><span class="ruby-operator">-</span> <span class="ruby-constant">Methods</span> <span class="ruby-operator">-</span><span class="ruby-operator">-</span><span class="ruby-operator">&gt;</span>
+
+   <span class="ruby-operator">&lt;</span><span class="ruby-identifier">section</span> <span class="ruby-identifier">id</span>=<span class="ruby-string">&quot;public-instance-5Buntitled-5D-method-details&quot;</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;method-section section&quot;</span><span class="ruby-operator">&gt;</span>
+    <span class="ruby-operator">&lt;</span><span class="ruby-identifier">h3</span> <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;section-header&quot;</span><span class="ruby-operator">&gt;</span><span class="ruby-constant">Public</span> <span class="ruby-constant">Instance</span> <span class="ruby-constant">Methods</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/h3&gt;
+
+    &lt;div id=&quot;method-i-actions_details&quot; class=&quot;method-detail &quot;&gt;
+
+      &lt;div class=&quot;method-heading&quot;&gt;
+        &lt;span class=&quot;method-name&quot;&gt;actions_details&lt;/</span><span class="ruby-identifier">pan</span><span class="ruby-operator">&gt;</span><span class="ruby-operator">&lt;</span><span class="ruby-identifier">span</span>
+          <span class="ruby-identifier">class</span>=<span class="ruby-string">&quot;method-args&quot;</span><span class="ruby-operator">&gt;</span>()<span class="ruby-operator">&lt;</span><span class="ruby-regexp">/span&gt;
+        &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/</span><span class="ruby-identifier">pan</span><span class="ruby-operator">&gt;</span>
+      <span class="ruby-operator">&lt;</span><span class="ruby-node">/div&gt;
+
+      &lt;div class=&quot;method-description&quot;&gt;
+
+        &lt;div class=&quot;method-source-code&quot; id=&quot;actions_details-source&quot;&gt;
+          &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/</span><span class="ruby-identifier">pec_helper</span>.<span class="ruby-identifier">rb</span>, <span class="ruby-identifier">line</span> <span class="ruby-value">163</span><span class="ruby-operator">&lt;</span><span class="ruby-regexp">/span&gt;
+</span></pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;actions_details&lt;/span&gt;</p>
+
+<pre>[{
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;              =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;4ee2482134a81a757a08af47&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idMemberCreator&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;data&amp;quot;&lt;/span&gt;=&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; {
+    &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;card&amp;quot;&lt;/span&gt;          =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; {
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;          =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;4ee2482134a81a757a08af45&amp;quot;&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;        =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Bytecode outputter&amp;quot;&lt;/span&gt;
+    },
+    &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;board&amp;quot;&lt;/span&gt;         =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; {
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;          =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;4ec54f2f73820a0dea0d1f0e&amp;quot;&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;        =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Caribou VM&amp;quot;&lt;/span&gt;
+    },
+    &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;list&amp;quot;&lt;/span&gt;          =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; {
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;          =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;4ee238b034a81a757a05cda0&amp;quot;&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;        =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Assembler&amp;quot;&lt;/span&gt;
+    }
+  },
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;            =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;2012-02-10T11:32:17Z&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;type&amp;quot;&lt;/span&gt;            =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;createCard&amp;quot;&lt;/span&gt;
+}]</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- actions_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- actions_details-method --&gt;
+
+&lt;div id=&quot;method-i-actions_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;actions_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;actions_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 186&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;actions_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;actions_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- actions_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- actions_payload-method --&gt;
+
+&lt;div id=&quot;method-i-attachments_details&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;attachments_details&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;attachments_details-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 120&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;attachments_details&lt;/span&gt;</p>
+
+<pre>[{
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;           =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;         =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;attachment1.png&amp;quot;&lt;/span&gt;,
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;          =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;http://trello-assets.domain.tld/attachment1.png&amp;quot;&lt;/span&gt;,
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;bytes&amp;quot;&lt;/span&gt;        =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;98765&lt;/span&gt;,
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idMember&amp;quot;&lt;/span&gt;     =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456781&amp;quot;&lt;/span&gt;,
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;isUpload&amp;quot;&lt;/span&gt;     =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;false&lt;/span&gt;,
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;         =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;2013-02-28T17:12:28.497Z&amp;quot;&lt;/span&gt;,
+ },
+ {
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;           =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456781&amp;quot;&lt;/span&gt;,
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;         =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;attachment2.png&amp;quot;&lt;/span&gt;,
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;          =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;http://trello-assets.domain.tld/attachment2.png&amp;quot;&lt;/span&gt;,
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;bytes&amp;quot;&lt;/span&gt;        =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;89123&lt;/span&gt;,
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idMember&amp;quot;&lt;/span&gt;     =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456782&amp;quot;&lt;/span&gt;,
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;isUpload&amp;quot;&lt;/span&gt;     =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;,
+   &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;         =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;2013-03-01T14:01:25.212Z&amp;quot;&lt;/span&gt;,
+ }]</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- attachments_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- attachments_details-method --&gt;
+
+&lt;div id=&quot;method-i-attachments_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;attachments_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;attachments_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 141&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;attachments_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;attachments_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- attachments_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- attachments_payload-method --&gt;
+
+&lt;div id=&quot;method-i-boards_details&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;boards_details&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;boards_details-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 52&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;boards_details&lt;/span&gt;</p>
+
+<pre>[{
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;             =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;           =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Test&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;desc&amp;quot;&lt;/span&gt;           =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;This is a test board&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;closed&amp;quot;&lt;/span&gt;         =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;false&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idOrganization&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;            =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;https://trello.com/board/test/abcdef123456789123456789&amp;quot;&lt;/span&gt;
+}]</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- boards_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- boards_details-method --&gt;
+
+&lt;div id=&quot;method-i-boards_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;boards_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;boards_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 63&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;boards_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;boards_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- boards_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- boards_payload-method --&gt;
+
+&lt;div id=&quot;method-i-card_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;card_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;card_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 145&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;card_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;cards_details&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;first&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- card_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- card_payload-method --&gt;
+
+&lt;div id=&quot;method-i-cards_details&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;cards_details&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;cards_details-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 99&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;cards_details&lt;/span&gt;</p>
+
+<pre>[{
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;                =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idShort&amp;quot;&lt;/span&gt;           =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;1&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;              =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Do something awesome&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;desc&amp;quot;&lt;/span&gt;              =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Awesome things are awesome.&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;closed&amp;quot;&lt;/span&gt;            =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;false&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idList&amp;quot;&lt;/span&gt;            =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idBoard&amp;quot;&lt;/span&gt;           =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idMembers&amp;quot;&lt;/span&gt;         =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; [&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;],
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;               =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;https://trello.com/card/board/specify-the-type-and-scope-of-the-jit-in-a-lightweight-spec/abcdef123456789123456789/abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;pos&amp;quot;&lt;/span&gt;               =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-value&quot;&gt;12&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;dateLastActivity&amp;quot;&lt;/span&gt;  =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;2012-12-07T18:40:24.314Z&amp;quot;&lt;/span&gt;
+}]</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- cards_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- cards_details-method --&gt;
+
+&lt;div id=&quot;method-i-cards_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;cards_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;cards_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 116&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;cards_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;cards_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- cards_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- cards_payload-method --&gt;
+
+&lt;div id=&quot;method-i-checklists_details&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;checklists_details&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;checklists_details-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 67&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;checklists_details&lt;/span&gt;</p>
+
+<pre>[{
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;         =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;       =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Test Checklist&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;desc&amp;quot;&lt;/span&gt;       =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;A marvelous little checklist&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;closed&amp;quot;&lt;/span&gt;     =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;false&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;        =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;https://trello.com/blah/blah&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idBoard&amp;quot;&lt;/span&gt;    =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idList&amp;quot;&lt;/span&gt;     =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idMembers&amp;quot;&lt;/span&gt;  =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; [&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;],
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;checkItems&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; { &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;ghijk987654321&amp;quot;&lt;/span&gt; }
+}]</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- checklists_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- checklists_details-method --&gt;
+
+&lt;div id=&quot;method-i-checklists_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;checklists_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;checklists_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 81&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;checklists_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;checklists_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- checklists_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- checklists_payload-method --&gt;
+
+&lt;div id=&quot;method-i-label_details&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;label_details&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;label_details-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 272&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;label_details&lt;/span&gt;</p>
+
+<pre>[
+  {&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;color&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;yellow&amp;quot;&lt;/span&gt;, &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;iOS&amp;quot;&lt;/span&gt;},
+  {&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;color&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;purple&amp;quot;&lt;/span&gt;, &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Issue or bug&amp;quot;&lt;/span&gt;}
+]</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- label_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- label_details-method --&gt;
+
+&lt;div id=&quot;method-i-label_name_details&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;label_name_details&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;label_name_details-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 283&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;label_name_details&lt;/span&gt;</p>
+
+<pre>[
+  {&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;yellow&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;bug&amp;quot;&lt;/span&gt;},
+  {&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;red&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;urgent&amp;quot;&lt;/span&gt;},
+  {&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;green&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;deploy&amp;quot;&lt;/span&gt;},
+  {&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;blue&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;on hold&amp;quot;&lt;/span&gt;},
+  {&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;orange&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;new feature&amp;quot;&lt;/span&gt;},
+  {&lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;purple&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;experimental&amp;quot;&lt;/span&gt;}
+]</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- label_name_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- label_name_details-method --&gt;
+
+&lt;div id=&quot;method-i-label_name_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;label_name_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;label_name_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 294&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;label_name_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;label_name_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- label_name_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- label_name_payload-method --&gt;
+
+&lt;div id=&quot;method-i-label_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;label_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;label_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 279&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;label_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;label_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- label_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- label_payload-method --&gt;
+
+&lt;div id=&quot;method-i-lists_details&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;lists_details&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;lists_details-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 85&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;lists_details&lt;/span&gt;</p>
+
+<pre>[{
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;      =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;    =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;To Do&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;closed&amp;quot;&lt;/span&gt;  =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;false&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idBoard&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;cards&amp;quot;&lt;/span&gt;   =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-identifier&quot;&gt;cards_details&lt;/span&gt;
+}]</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- lists_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- lists_details-method --&gt;
+
+&lt;div id=&quot;method-i-lists_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;lists_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;lists_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 95&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;lists_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;lists_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- lists_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- lists_payload-method --&gt;
+
+&lt;div id=&quot;method-i-notification_details&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;notification_details&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;notification_details-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 190&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;notification_details&lt;/span&gt;</p>
+
+<pre>{
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;              =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;4f30d084d5b0f7ab453bee51&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;unread&amp;quot;&lt;/span&gt;          =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;false&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;type&amp;quot;&lt;/span&gt;            =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;commentCard&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;date&amp;quot;&lt;/span&gt;            =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;2012-02-07T07:19:32.393Z&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;data&amp;quot;&lt;/span&gt;            =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; {
+    &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;board&amp;quot;&lt;/span&gt;         =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; {
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;          =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;        =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Test&amp;quot;&lt;/span&gt;
+    },
+    &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;card&amp;quot;&lt;/span&gt;=&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt;{
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;          =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;        =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Do something awesome&amp;quot;&lt;/span&gt;
+    },
+    &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;text&amp;quot;&lt;/span&gt;          =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;test&amp;quot;&lt;/span&gt;
+  },
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idMemberCreator&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789012345678&amp;quot;&lt;/span&gt;
+}</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- notification_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- notification_details-method --&gt;
+
+&lt;div id=&quot;method-i-notification_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;notification_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;notification_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 211&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;notification_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;notification_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- notification_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- notification_payload-method --&gt;
+
+&lt;div id=&quot;method-i-organization_details&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;organization_details&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;organization_details-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 215&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;organization_details&lt;/span&gt;</p>
+
+<pre>{
+    &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;4ee7e59ae582acdec8000291&amp;quot;&lt;/span&gt;,
+    &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;publicorg&amp;quot;&lt;/span&gt;,
+    &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;desc&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;This is a test organization&amp;quot;&lt;/span&gt;,
+    &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;members&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; [{
+        &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;4ee7df3ce582acdec80000b2&amp;quot;&lt;/span&gt;,
+        &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;username&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;alicetester&amp;quot;&lt;/span&gt;,
+        &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;fullName&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Alice Tester&amp;quot;&lt;/span&gt;
+    }, {
+        &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;4ee7df74e582acdec80000b6&amp;quot;&lt;/span&gt;,
+        &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;username&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;davidtester&amp;quot;&lt;/span&gt;,
+        &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;fullName&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;David Tester&amp;quot;&lt;/span&gt;
+    }, {
+        &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;4ee7e2e1e582acdec8000112&amp;quot;&lt;/span&gt;,
+        &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;username&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;edtester&amp;quot;&lt;/span&gt;,
+        &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;fullName&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Ed Tester&amp;quot;&lt;/span&gt;
+    }]
+}</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- organization_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- organization_details-method --&gt;
+
+&lt;div id=&quot;method-i-organization_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;organization_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;organization_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 236&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;organization_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;organization_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- organization_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- organization_payload-method --&gt;
+
+&lt;div id=&quot;method-i-orgs_details&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;orgs_details&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;orgs_details-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 149&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;orgs_details&lt;/span&gt;</p>
+
+<pre>[{
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;          =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;name&amp;quot;&lt;/span&gt;        =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;test&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;displayName&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Test Organization&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;desc&amp;quot;&lt;/span&gt;        =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;This is a test organization&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;         =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;https://trello.com/test&amp;quot;&lt;/span&gt;
+}]</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- orgs_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- orgs_details-method --&gt;
+
+&lt;div id=&quot;method-i-orgs_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;orgs_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;orgs_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 159&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;orgs_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;orgs_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- orgs_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- orgs_payload-method --&gt;
+
+&lt;div id=&quot;method-i-token_details&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;token_details&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;token_details-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 240&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;token_details&lt;/span&gt;</p>
+
+<pre>{
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;            =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;4f2c10c7b3eb95a45b294cd5&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idMember&amp;quot;&lt;/span&gt;      =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789123456789&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;dateCreated&amp;quot;&lt;/span&gt;   =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;2012-02-03T16:52:23.661Z&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;permissions&amp;quot;&lt;/span&gt;   =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; [
+    {
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idModel&amp;quot;&lt;/span&gt;   =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;me&amp;quot;&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;modelType&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Member&amp;quot;&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;read&amp;quot;&lt;/span&gt;      =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;write&amp;quot;&lt;/span&gt;     =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;
+    },
+    {
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idModel&amp;quot;&lt;/span&gt;   =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;modelType&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Board&amp;quot;&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;read&amp;quot;&lt;/span&gt;      =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;write&amp;quot;&lt;/span&gt;     =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;
+    },
+    {
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;idModel&amp;quot;&lt;/span&gt;   =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;*&amp;quot;&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;modelType&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Organization&amp;quot;&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;read&amp;quot;&lt;/span&gt;      =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;,
+      &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;write&amp;quot;&lt;/span&gt;     =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-keyword&quot;&gt;true&lt;/span&gt;
+    }
+  ]
+}</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- token_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- token_details-method --&gt;
+
+&lt;div id=&quot;method-i-token_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;token_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;token_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 268&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;token_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;token_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- token_payload-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- token_payload-method --&gt;
+
+&lt;div id=&quot;method-i-user_details&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;user_details&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;user_details-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 36&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;user_details&lt;/span&gt;</p>
+
+<pre>{
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;id&amp;quot;&lt;/span&gt;         =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef123456789012345678&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;fullName&amp;quot;&lt;/span&gt;   =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;Test User&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;username&amp;quot;&lt;/span&gt;   =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;me&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;avatarHash&amp;quot;&lt;/span&gt; =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;abcdef1234567890abcdef1234567890&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;bio&amp;quot;&lt;/span&gt;        =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;a rather dumb user&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;url&amp;quot;&lt;/span&gt;        =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;https://trello.com/me&amp;quot;&lt;/span&gt;,
+  &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;email&amp;quot;&lt;/span&gt;      =&lt;span class=&quot;ruby-operator&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;ruby-string&quot;&gt;&amp;quot;johnsmith@example.com&amp;quot;&lt;/span&gt;
+}</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>    &lt;/div&gt;&lt;!-- user_details-source --&gt;
+
+  &lt;/div&gt;
+
+&lt;/div&gt;&lt;!-- user_details-method --&gt;
+
+&lt;div id=&quot;method-i-user_payload&quot; class=&quot;method-detail &quot;&gt;
+
+  &lt;div class=&quot;method-heading&quot;&gt;
+    &lt;span class=&quot;method-name&quot;&gt;user_payload&lt;/span&gt;&lt;span
+      class=&quot;method-args&quot;&gt;()&lt;/span&gt;
+    &lt;span class=&quot;method-click-advice&quot;&gt;click to toggle source&lt;/span&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;method-description&quot;&gt;
+
+    &lt;div class=&quot;method-source-code&quot; id=&quot;user_payload-source&quot;&gt;
+      &lt;pre&gt;&lt;span class=&quot;ruby-comment&quot;&gt;# File spec/spec_helper.rb, line 48&lt;/span&gt;</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;def&lt;/span&gt; &lt;span
+class=“ruby-identifier”&gt;user_payload&lt;/span&gt;</p>
+
+<pre>&lt;span class=&quot;ruby-constant&quot;&gt;JSON&lt;/span&gt;.&lt;span class=&quot;ruby-identifier&quot;&gt;generate&lt;/span&gt;(&lt;span class=&quot;ruby-identifier&quot;&gt;user_details&lt;/span&gt;)</pre>
+
+<p>&lt;span class=“ruby-keyword”&gt;end&lt;/span&gt;&lt;/pre&gt;</p>
+
+<pre>        &lt;/div&gt;&lt;!-- user_payload-source --&gt;
+
+      &lt;/div&gt;
+
+    &lt;/div&gt;&lt;!-- user_payload-method --&gt;
+
+  &lt;/section&gt;&lt;!-- public-instance-method-details --&gt;
+
+&lt;/section&gt;&lt;!-- 5Buntitled-5D --&gt;</pre>
+
+<p>&lt;/div&gt;&lt;!– documentation –&gt;</p>
+
+<p>&lt;footer id=“validator-badges”&gt;</p>
+
+<pre>&lt;p&gt;&lt;a href=&quot;http://validator.w3.org/check/referer&quot;&gt;[Validate]&lt;/a&gt;
+&lt;p&gt;Generated by &lt;a href=&quot;https://github.com/rdoc/rdoc&quot;&gt;RDoc&lt;/a&gt; 3.12.
+&lt;p&gt;Generated with the &lt;a href=&quot;http://deveiate.org/projects/Darkfish-Rdoc/&quot;&gt;Darkfish Rdoc Generator&lt;/a&gt; 3.</pre>
+
+<p>&lt;/footer&gt;</p>
+
+</div>
+
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 4.0.0.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+

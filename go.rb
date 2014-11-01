@@ -31,6 +31,7 @@ if ( matches && matches.size > 0 )
 
     cardId = matches[1]
     card = client.find(:card, cardId)
+    message = COMMIT_MSG.gsub(/([^ ]*trello\.com[^ ]*)/, "");
     print "#{card.name} was found for card id #{cardId}]\n"
     
     comment = "\n"
@@ -38,7 +39,7 @@ if ( matches && matches.size > 0 )
     comment+= "\n\n"
     comment+= "#{AUTHOR} just committed a change to *#{BRANCH}* and tagged this card with the following message:\n"
     comment+= "\n"
-    comment+= "> #{COMMIT_MSG}"
+    comment+= "> #{message}"
     
     card.add_comment(comment)
 

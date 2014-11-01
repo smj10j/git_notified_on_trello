@@ -1,6 +1,9 @@
 # https://github.com/smj10j/git-notified-on-trello
 
 # Get consumer key by calling
+# https://trello.com/1/authorize?key=16f7525a7039ee80c23365e648b8a542&name=Git%20Notified%20on%20Trello&response_type=token&scope=read,write,account&expiration=never
+
+#Ifyou'd like to use your own application, replace the above with this:
 # https://trello.com/1/authorize?key=YOUR_API_KEY&name=YOUR_APP_NAME&response_type=token&scope=read,write,account&expiration=never
 
 ## SET THESE ENVIRONMENT VARIABLES
@@ -31,11 +34,11 @@ if ( matches && matches.size > 0 )
     print "#{card.name} was found for card id #{cardId}]\n"
     
     comment = "\n"
-    comment+= "** This is an automated post made through Steve's account **"
+    comment+= "** ...whrr.. This is an automated post by the Trello Robot.. bzz.. **"
     comment+= "\n\n"
     comment+= "#{AUTHOR} just committed a change to *#{BRANCH}* and tagged this card with the following message:\n"
-    comment+= "     \n"
-    comment+= "     \"#{COMMIT_MSG}\""
+    comment+= "\n"
+    comment+= "> #{COMMIT_MSG}"
     
     card.add_comment(comment)
 

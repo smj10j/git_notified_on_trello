@@ -1,3 +1,4 @@
-source 'https://rubygems.org' 
+source 'https://rubygems.org'
 
-gem 'ruby-trello'
+# Specify your gem's dependencies in git-notified-on-trello.gemspec
+gemspec

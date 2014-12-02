@@ -38,10 +38,20 @@ module GNOT
     if ( matches && matches.size > 0 )
 
       require 'trello'
-      client = Trello::Client.new(
-          :developer_public_key => ENV['DEVELOPER_KEY'],
-          :member_token => ENV['MEMBER_TOKEN']
-      )
+
+      begin
+        client = Trello::Client.new(
+            :developer_public_key => ENV['DEVELOPER_KEY'],
+            :member_token => ENV['MEMBER_TOKEN']
+        )
+      rescue
+        @error_message="#{$!}"
+        puts "#{@error_message}"
+        exit 1
+      ensure
+
+      end
+
 
       cardId = matches[1]
       card = client.find(:card, cardId)
@@ -54,7 +64,9 @@ module GNOT
       comment+= "** ...whrr.. This is an automated post by the Trello Robot.. bzz.. **\n"
       comment+= "\n"
       comment+= "Branch *#{opts.branch}*\n"
-      comment+= "#{opts.author} committed #[#{opts.commit}](https://github.com/Extrabux/Extrabux-Complete/commits/#{opts.commit}) and tagged this card with the following message:\n"
+      comment+= "#{opts.author} committed #[#{opts.commit}](https://github.com/Extrabux/Extrabux-Complete/commits/#{opts.commit})\n"
+      comment+= "\n"
+      comment+= "following message:\n"
       comment+= "\n"
       comment+= "#{cardMessage}"
 

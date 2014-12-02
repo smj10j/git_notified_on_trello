@@ -64,9 +64,8 @@ module GNOT
       comment+= "** ...whrr.. This is an automated post by the Trello Robot.. bzz.. **\n"
       comment+= "\n"
       comment+= "Branch *#{opts.branch}*\n"
-      comment+= "#{opts.author} committed #[#{opts.commit}](https://github.com/Extrabux/Extrabux-Complete/commits/#{opts.commit})\n"
       comment+= "\n"
-      comment+= "following message:\n"
+      comment+= "#{opts.author} committed #[#{opts.commit}](https://github.com/Extrabux/Extrabux-Complete/commits/#{opts.commit})\n"
       comment+= "\n"
       comment+= "#{cardMessage}"
 

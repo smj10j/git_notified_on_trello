@@ -51,9 +51,10 @@ module GNOT
       print "#{card.name} was found for card id #{cardId}\n"
 
       comment = "\n"
-      comment+= "** ...whrr.. This is an automated post by the Trello Robot.. bzz.. **"
-      comment+= "\n\n"
-      comment+= "#{opts.author} committed #[#{opts.commit}](https://github.com/Extrabux/Extrabux-Complete/commits/#{opts.commit}) to *#{opts.branch}* and tagged this card with the following message:\n"
+      comment+= "** ...whrr.. This is an automated post by the Trello Robot.. bzz.. **\n"
+      comment+= "\n"
+      comment+= "Branch *#{opts.branch}*\n"
+      comment+= "#{opts.author} committed #[#{opts.commit}](https://github.com/Extrabux/Extrabux-Complete/commits/#{opts.commit}) and tagged this card with the following message:\n"
       comment+= "\n"
       comment+= "#{cardMessage}"
 

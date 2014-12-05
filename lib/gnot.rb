@@ -3,7 +3,7 @@
 #
 # https://github.com/smj10j/git-notified-on-trello
 #
-require './lib/gnot/version'
+require_relative 'gnot/version'
 module GNOT
 
   class GitNotifiedOnTrello

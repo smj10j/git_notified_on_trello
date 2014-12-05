@@ -1,7 +1,5 @@
 # coding: utf-8
-lib = File.expand_path('../lib', __FILE__)
-$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'gnot/version'
+require_relative 'lib/gnot/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "git-notified-on-trello"
@@ -22,7 +20,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.1"
 
-  spec.add_runtime_dependency "ruby-trello"
-  spec.add_runtime_dependency "trollop"
+  spec.add_runtime_dependency "ruby-trello", '~> 0'
+  spec.add_runtime_dependency "trollop", '~> 0'
 
 end

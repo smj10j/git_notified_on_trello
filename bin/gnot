@@ -1,4 +1,4 @@
 #!/bin/bash
-
-ruby lib/gnot.rb "$@"
+DIR=$(dirname $0)
+ruby $DIR/../lib/gnot.rb "$@"
 

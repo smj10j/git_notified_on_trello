@@ -39,9 +39,6 @@ git push
 # Generate the gem and send to rubygems
 rake release
 
-# Push the generated tags
-git push --tags
-
 
 
 echo "Done!"

@@ -1,20 +1,21 @@
-cache: 
-  bundler: true
-  apt: true
-  directories:
-    - vendor/bundle
-
 language: ruby
 rvm:
   - jruby
   - 2.1.0
 
-install: bundle install --without development --jobs=3 --retry=3
+cache:
+  bundler: true
+  apt: true
+  directories:
+    - vendor/bundle
+
+install: bundle install --jobs=3 --retry=3
+
 deploy:
   provider: rubygems
   api_key: "38d57d2ad2520318f2155c1cc717925f"
-gem:
-    master: git-notified-on-trello
-on:
-  tags: true
-  branch: master
+  gem:
+    master: git_notified_on_trello
+  on:
+    tags: true
+    branch: master

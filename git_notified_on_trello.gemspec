@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Stephen Johnson"]
   spec.email         = ["steve@01j.me"]
   spec.summary       = %q{Get notified of pushes to a Git Repo with updates to relevant Trello cards}
-  spec.description   = %q{Makes Trello more useful when managing software development teams}
+  spec.description   = %q{Makes Trello more useful when managing software development teams by increasing two-way communication}
   spec.homepage      = "https://github.com/smj10j/git_notified_on_trello"
   spec.license       = "MIT"
 

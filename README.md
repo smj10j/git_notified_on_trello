@@ -26,7 +26,7 @@ You can modify the *scope* and *expiration* parameters to your liking. More info
 Here's a wizard that'll walk you through generating the URL:
 
 ```bash
-curl -sSfL https://gist.githubusercontent.com/smj10j/ee986c09795b6eeeccae/raw/trello-get-oauth-url-wizard.sh | /bin/bash
+curl -sSfL https://raw.githubusercontent.com/smj10j/git_notified_on_trello/master/docs/trello-get-oauth-url-wizard.sh | /bin/bash
 ```
 
  

@@ -1,5 +1,7 @@
 # coding: utf-8
-require_relative 'lib/git_notified_on_trello/version'
+lib = File.expand_path('../lib', __FILE__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require 'git_notified_on_trello/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "git_notified_on_trello"

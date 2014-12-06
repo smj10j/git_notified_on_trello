@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
-require 'git_notified_on_trello'
 require 'trollop'
+require 'git_notified_on_trello'
 require 'git_notified_on_trello/version'
 
 #

@@ -5,6 +5,7 @@
 #
 
 require 'trello'
+require 'git_notified_on_trello/version'
 
 module GitNotifiedOnTrello
 

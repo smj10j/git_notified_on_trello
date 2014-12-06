@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 
 VERSION_FILE="lib/git_notified_on_trello/version.rb"
 
@@ -24,6 +25,9 @@ fi
 TAG="$VERSION.$MAJOR.$MINOR"
 echo "Releasing gem with tag $TAG"
 
+# Let's run the tests first
+rake spec
+
 # Update the version file
 sed -i 's/\(.*\)VERSION = .*/\1VERSION = "'$TAG'"/' "$VERSION_FILE"
 
@@ -32,12 +36,12 @@ git add $VERSION_FILE
 git commit -m "Release $TAG"
 git push
 
-# Tag the release
-git tag "$TAG"
+# Generate the gem and send to rubygems
+rake release
+
+# Push the generated tags
 git push --tags
 
-# Make it so
-rake release
 
 
 echo "Done!"

@@ -1,4 +1,4 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in git-notified-on-trello.gemspec
+# Specify your gem's dependencies in git_notified_on_trello.gemspec
 gemspec

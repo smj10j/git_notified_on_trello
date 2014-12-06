@@ -11,5 +11,5 @@
 *.so
 *.o
 *.a
-git-notified-on-trello*.gem
+git_notified_on_trello*.gem
 mkmf.log

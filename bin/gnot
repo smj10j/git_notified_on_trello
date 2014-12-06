@@ -1,4 +1,44 @@
-#!/bin/bash
-DIR=$(dirname $0)
-ruby $DIR/../lib/gnot.rb "$@"
+#!/usr/bin/env ruby
 
+require 'git_notified_on_trello'
+require 'trollop'
+require 'git_notified_on_trello/version'
+
+#
+# DEVELOPER_KEY and MEMBER_TOKEN are expected to be provided as environment variables
+# when using the command-line invocation
+#
+if (!ENV['DEVELOPER_KEY'])
+  puts "An environment variable named DEVELOPER_KEY must be set to your Trello developer key"
+  puts "Generate your credentials here: https://trello.com/1/authorize?key=YOUR_API_KEY&name=YOUR_APP_NAME&response_type=token&scope=read,write,account&expiration=never"
+  exit
+end
+
+if (!ENV['MEMBER_TOKEN'])
+  puts "An environment variable named MEMBER_TOKEN must be set to your Trello member token"
+  puts "Generate your credentials here: https://trello.com/1/authorize?key=YOUR_API_KEY&name=YOUR_APP_NAME&response_type=token&scope=read,write,account&expiration=never"
+  exit
+end
+
+# Parse the command-line arguments
+opts = Trollop::options do
+  opt :author,    "The commit author",           :type => :string,      :required => true
+  opt :branch,    "The branch the commit is on", :type => :string,      :required => true
+  opt :commit,    "The commit hash",             :type => :string,      :required => true
+  opt :message,   "The commit message",          :type => :string,      :required => true
+  opt :version,   GitNotifiedOnTrello::VERSION
+  opt :help
+end
+
+# Make the post
+notifier = GitNotifiedOnTrello::Notifier.new(
+    :developer_public_key => ENV['DEVELOPER_KEY'],
+    :member_token => ENV['MEMBER_TOKEN'],
+    :debug => true
+)
+notifier.notify(
+    opts.branch,
+    opts.commit,
+    opts.author,
+    opts.message
+)

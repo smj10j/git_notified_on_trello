@@ -1,4 +1,4 @@
-git-notified-on-trello
+git_notified_on_trello
 ======================
 
 Get notified of pushes to a Git Repo with updates to relevant Trello cards
@@ -9,7 +9,6 @@ Setup
 
 https://trello.com/1/authorize?key=YOUR_API_KEY&name=YOUR_APP_NAME&response_type=token&scope=read,write,account&expiration=never
 -
-http:// www
 
 
 ### TODO ###
@@ -25,9 +24,9 @@ http:// www
 - style the comments with some fancy markdown
 
 
-
+rake install \
 DEVELOPER_KEY="16f7525a7039ee80c23365e648b8a542" \
-MEMBER_TOKEN="4c298813ca0798c974c45e1a7657adecfc47b77a93e7d56c8d1b8a1cd9198168" \
+MEMBER_TOKEN="" \
 ./bin/gnot -a "Stephen Johnson" -b "feature-git-notified-on-trello" -c "3463457" -m " Is it useful?\n\nhttps://trello.com/c/hR3cSUiu/1189-git-trello-plugin \nLine break on the shell like a normal commit messages would be.\n\nLet's try some *markdown*\n-------------------------\n"
 
 

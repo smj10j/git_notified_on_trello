@@ -27,11 +27,17 @@ echo "Releasing gem with tag $TAG"
 # Update the version file
 sed -i 's/\(.*\)VERSION = .*/\1VERSION = "'$TAG'"/' "$VERSION_FILE"
 
-# Do the Git work
+# Commit the changes for the bump
 git add $VERSION_FILE
 git commit -m "Release $TAG"
+git push
+
+# Tag the release
 git tag "$TAG"
 git push --tags
+
+# Make it so
+rake release
 
 
 echo "Done!"

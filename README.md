@@ -13,14 +13,16 @@ Trello makes this very easy.
 You can read more on the [Trello API Documentation](https://trello.com/docs/) pages, but here's the quick-start:
 
 
-1. [Generate your developer key](https://trello.com/1/appKey/generate) (or view it if you've already created one) 
+1. Generate (or view it if you've already created one) your developer key [https://trello.com/1/appKey/generate](https://trello.com/1/appKey/generate) 
 
-2. Generate a consumer key / member token, replacing YOUR_API_KEY with the key received above and YOUR_APP_NAME with the friendly name you'd like to display to user's:
-  https://trello.com/1/authorize?key=YOUR_API_KEY&name=YOUR_APP_NAME&response_type=token&scope=read,write,account&expiration=never
-
-
-You can modify the *scope* and *expiration* parameters to your liking. More information at [Getting a Token From a User](https://trello.com/docs/gettingstarted/index.html#getting-a-token-from-a-user)
-
+2. Generate a consumer key / member token 
+    - Replace YOUR_API_KEY with the key received above
+    - Replace YOUR_APP_NAME with the friendly name you'd like to display to users
+    - Modify *scope* and *expiration* for your needs
+    
+    Template: https://trello.com/1/authorize?key=YOUR_API_KEY&name=YOUR_APP_NAME&response_type=token&scope=read,write,account&expiration=never
+    
+    More information can be found on Trello [Getting a Token From a User](https://trello.com/docs/gettingstarted/index.html#getting-a-token-from-a-user)
 
 
 Here's a wizard that'll walk you through generating the URL:

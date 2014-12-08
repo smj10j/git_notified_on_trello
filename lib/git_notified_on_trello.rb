@@ -34,11 +34,11 @@ module GitNotifiedOnTrello
         comment = "\n"
         comment+= "** ...whrr.. This is an automated post by the Trello Robot.. bzz.. **\n"
         comment+= "\n"
-        comment+= "Branch *#{branch}*\n"
+        comment+= "#{author} pushed a change to **#{branch}**\n"
         comment+= "\n"
-        comment+= "#{author} committed #[#{commit}](https://github.com/Extrabux/Extrabux-Complete/commits/#{commit})\n"
+        comment+= "#{cardMessage}\n"
         comment+= "\n"
-        comment+= "#{cardMessage}"
+        comment+= "View the change on Github: [#{commit}](https://github.com/Extrabux/Extrabux-Complete/commit/#{commit})\n"
 
         if(@debug)
           print comment

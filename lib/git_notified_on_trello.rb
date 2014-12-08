@@ -32,13 +32,11 @@ module GitNotifiedOnTrello
         print "Trello card \"#{card.name}\" was found with card id #{cardId}\n"
 
         comment = "\n"
-        comment+= "** ...whrr.. This is an automated post by the Trello Robot.. bzz.. **\n"
-        comment+= "\n"
-        comment+= "#{author} pushed a change to **#{branch}**\n"
-        comment+= "\n"
+        comment+= "** #{author} pushed a change to #{branch} **\n"
+        comment+= "\n\n"
         comment+= "#{cardMessage}\n"
-        comment+= "\n"
-        comment+= "View the change on Github: [#{commit}](https://github.com/Extrabux/Extrabux-Complete/commit/#{commit})\n"
+        comment+= "\n\n"
+        comment+= "View this change on Github: [#{commit}](https://github.com/Extrabux/Extrabux-Complete/commit/#{commit})\n"
 
         if(@debug)
           print comment

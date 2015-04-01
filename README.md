@@ -1,6 +1,8 @@
 git_notified_on_trello
 ======================
 
+[![Join the chat at https://gitter.im/smj10j/git_notified_on_trello](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/smj10j/git_notified_on_trello?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 Get notified of pushes to a Git Repo with updates to relevant Trello cards
 
 
